@@ -1,11 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<?php
+require 'db_connect.php';
+
+if($_SERVER["REQUEST_METHOD"]=="POST")
+{
+    echo "inside if";
+    $userName=$_POST['userName'];
+    $password=md5($_POST['password']);
+      
     
-</body>
-</html>
+
+    $sql="SELECT * FROM reg_details WHERE email='$userName' AND pswd='$password'";
+
+    $result=mysqli_query($conn,$sql);
+    if(!$result)
+    {
+    echo "Error: ".mysqli_error($conn);
+    
+    exit;
+    }
+   // header("Location: login.php");
+    echo "You have Logged in Successfully ";//<a href='login.php'>LOGIN Here</a>";
+    //mysqli_close($conn);
+
+}
+
+?>

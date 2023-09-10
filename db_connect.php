@@ -24,7 +24,7 @@
     echo "Connection successful";
 
 
-}
+
 
 ?>
 

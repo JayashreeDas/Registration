@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="card-body">
-                    <form>
+                    <form action="login_connect.php" method="POST">
                         <div class="row mb-3 text-center mt-3">
                             <div class="col-md-4"><label for="userName" class="form-label">Username/Email</label></div>
                             <div class="col-md-8"><input type="text" class="form-control" id="userName" name="userName" required></div>

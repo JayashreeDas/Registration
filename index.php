@@ -18,7 +18,7 @@
 
                     <div class="card-body">
                         
-                        <form action="connect.php" method="post" >
+                        <form action="register_connect.php" method="POST" >
                             <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="firstName" class="form-label" >First Name </label>
